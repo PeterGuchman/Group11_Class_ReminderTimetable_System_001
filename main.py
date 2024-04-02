@@ -91,7 +91,7 @@ def upload_data(username, password, email, phone, position, course, year):
     cursor = db_connection.cursor()
 
     # Insert user data into database
-    query = "INSERT INTO users (User_Name, User_Password, User_Email, User_Phone_Number, User_Role, Curse, User_Year) VALUES (%s, %s, %s, %s, %s, %s, %s)"
+    query = "INSERT INTO users (User_Name, User_Password, User_Email, User_Phone_Number, User_Role, Course, User_Year) VALUES (%s, %s, %s, %s, %s, %s, %s)"
     cursor.execute(query, (username, password, email, phone, position, course, year))
     db_connection.commit()
 
